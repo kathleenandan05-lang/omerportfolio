@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Omer El Awad — Operations & Automation Specialist",
+  title: "Omer El Awad | Operations & Automation Specialist",
   description:
     "Industrial Engineer and Automation Specialist who builds CRM systems, Zapier/Make workflows, dashboards, and SOPs that help businesses eliminate manual work and scale operations.",
   keywords: [
@@ -29,14 +29,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Omer El Awad" }],
   openGraph: {
-    title: "Omer El Awad — Operations & Automation Specialist",
+    title: "Omer El Awad | Operations & Automation Specialist",
     description:
       "Building CRM systems, automation workflows, and operations infrastructure that eliminates manual work and scales businesses.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Omer El Awad — Operations & Automation Specialist",
+    title: "Omer El Awad | Operations & Automation Specialist",
     description:
       "Building CRM systems, automation workflows, and operations infrastructure that eliminates manual work and scales businesses.",
   },

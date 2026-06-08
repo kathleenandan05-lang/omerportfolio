@@ -26,7 +26,7 @@ export default function Contact() {
 
           <p className="text-lg text-slate-500 leading-relaxed mb-10 max-w-xl mx-auto">
             If you&apos;re looking to clean up your operations, automate manual work, or get
-            visibility into your pipeline — I&apos;d love to hear about what you&apos;re working on.
+            visibility into your pipeline. I&apos;d love to hear about what you&apos;re working on.
           </p>
 
           {/* CTA Buttons */}

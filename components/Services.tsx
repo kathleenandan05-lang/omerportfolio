@@ -23,7 +23,7 @@ const services = [
     icon: "⚡",
     title: "Automation Workflows",
     description:
-      "End-to-end automation with Zapier and Make.com — connecting your tools, eliminating manual handoffs, and making sure nothing falls through the cracks.",
+      "End-to-end automation with Zapier and Make.com, connecting your tools, eliminating manual handoffs, and making sure nothing falls through the cracks.",
     deliverables: ["Multi-step Zaps/Scenarios", "App integrations", "Error handling", "Documentation"],
   },
   {
@@ -37,14 +37,14 @@ const services = [
     icon: "🗂️",
     title: "Data Organization & Reconciliation",
     description:
-      "Cleaning, structuring, and reconciling messy data across platforms — so your records are accurate and your systems work from a clean foundation.",
+      "Cleaning, structuring, and reconciling messy data across platforms so your records are accurate and your systems work from a clean foundation.",
     deliverables: ["Deduplication", "Data normalization", "Cross-platform sync", "Audit logs"],
   },
   {
     icon: "⚙️",
     title: "Admin & Operations Support",
     description:
-      "Ongoing operational support for businesses that need a reliable systems person without a full-time hire — from process improvement to tool management.",
+      "Ongoing operational support for businesses that need a reliable systems person without a full-time hire, covering process improvement to tool management.",
     deliverables: ["Tool management", "Process improvement", "Workflow optimization", "Team coordination"],
   },
 ];
@@ -66,7 +66,7 @@ export default function Services() {
         <SectionHeader
           eyebrow="Services"
           title="What I can help you with"
-          subtitle="Focused on the operational work that compounds — systems, automation, and visibility."
+          subtitle="Focused on the operational work that compounds: systems, automation, and visibility."
         />
 
         <motion.div

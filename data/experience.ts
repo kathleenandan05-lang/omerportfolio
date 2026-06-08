@@ -38,7 +38,7 @@ export const experience: ExperienceEntry[] = [
       "Built and managed automation systems, CRM pipelines, and marketing workflows for a real estate coaching business.",
     responsibilities: [
       "Designed and maintained Zapier & Make.com workflows for lead capture, CRM updates, and team notifications",
-      "Managed JobNimbus CRM — pipeline configuration, contact management, and stage-based automation",
+      "Managed JobNimbus CRM: pipeline configuration, contact management, and stage-based automation",
       "Built an AI-powered newsletter generator using Claude/ChatGPT, reducing production time by 92%",
       "Integrated Flodesk with CRM and marketing platforms for automated email sequences",
       "Created SOPs and documentation for all automation systems",

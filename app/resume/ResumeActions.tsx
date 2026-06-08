@@ -7,7 +7,7 @@ export default function ResumeActions() {
     <div className="no-print bg-white border-b border-slate-100 sticky top-16 z-30 shadow-sm">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 py-3 flex items-center justify-between gap-4 flex-wrap">
         <div>
-          <p className="text-sm font-semibold text-slate-700">{profile.name} — Resume</p>
+          <p className="text-sm font-semibold text-slate-700">{profile.name} | Resume</p>
           <p className="text-xs text-slate-400">{profile.title}</p>
         </div>
         <div className="flex gap-3">

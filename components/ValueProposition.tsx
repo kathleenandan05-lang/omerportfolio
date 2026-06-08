@@ -24,7 +24,7 @@ const values = [
     icon: "📊",
     title: "Dashboards & Process Visibility",
     description:
-      "KPI dashboards and reporting systems so you always know what's happening in your operations — without chasing updates.",
+      "KPI dashboards and reporting systems so you always know what's happening in your operations, without chasing updates.",
     color: "bg-indigo-50 border-indigo-100",
     iconBg: "bg-indigo-100",
   },

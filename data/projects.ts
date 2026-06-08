@@ -3,10 +3,10 @@
 //
 // HOW TO ADD A NEW PROJECT:
 // 1. Copy the object template at the bottom of this file
-// 2. Fill in each field — required fields are marked with (*)
+// 2. Fill in each field - required fields are marked with (*)
 // 3. Set featuredOnHome: true to show it on the homepage
 // 4. Set resumeVisible: true to include it on the resume page
-// 5. Save the file — the site updates automatically everywhere
+// 5. Save the file. The site updates automatically everywhere
 //
 // SLUG: must be URL-safe (lowercase, hyphens only, no spaces)
 // CATEGORY: use one of the defined ProjectCategory values below
@@ -59,11 +59,11 @@ export const projects: Project[] = [
     tags: ["GoHighLevel", "Zapier", "CRM", "Lead Automation", "SMS", "Real Estate"],
     client: "Roofing & Home Services Company",
     shortSummary:
-      "Built a fully automated lead pipeline that responds to every new inquiry within 2 minutes — replacing a slow, manual spreadsheet process.",
+      "Built a fully automated lead pipeline that responds to every new inquiry within 2 minutes, replacing a slow, manual spreadsheet process.",
     problem:
       "The client was tracking leads in spreadsheets and relying on manual follow-up. Response times averaged 2–4 hours, resulting in lost opportunities to faster-responding competitors. There was no visibility into pipeline stages or lead status.",
     solution:
-      "Designed and deployed a GoHighLevel CRM pipeline with Zapier-triggered automations. Every new lead from web forms and ads is automatically entered, tagged, assigned to a stage, and sent a personalized SMS and email sequence — all within 2 minutes of submission.",
+      "Designed and deployed a GoHighLevel CRM pipeline with Zapier-triggered automations. Every new lead from web forms and ads is automatically entered, tagged, assigned to a stage, and sent a personalized SMS and email sequence, all within 2 minutes of submission.",
     process: [
       {
         heading: "Audit & Discovery",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
       },
       {
         heading: "AI Drafting Pipeline",
-        body: "Built a prompt template in Claude/ChatGPT that takes the topic queue and outputs a fully formatted, on-brand newsletter draft in HTML — including subject line and preview text.",
+        body: "Built a prompt template in Claude/ChatGPT that takes the topic queue and outputs a fully formatted, on-brand newsletter draft in HTML, including the subject line and preview text.",
       },
       {
         heading: "Flodesk Integration",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       { value: "5×", label: "Faster publishing cadence achievable" },
     ],
     lessons:
-      "The most impactful change was the AI prompt template. Investing time in designing a detailed, structured prompt paid off massively — the output quality eliminated the need for heavy editing.",
+      "The most impactful change was the AI prompt template. Investing time in designing a detailed, structured prompt paid off massively. The output quality eliminated the need for heavy editing.",
     dateCompleted: "2025-08",
     featuredOnHome: true,
     resumeVisible: true,
@@ -161,7 +161,7 @@ export const projects: Project[] = [
     tags: ["JobNimbus", "CRM", "Data Cleanup", "Automation", "Reporting", "Sales"],
     client: "Home Services Sales Team",
     shortSummary:
-      "Audited, rebuilt, and automated a CRM system that had become unusable — transforming it into a reliable pipeline that improved deal close rates by 30%.",
+      "Audited, rebuilt, and automated a CRM system that had become unusable, transforming it into a reliable pipeline that improved deal close rates by 30%.",
     problem:
       "The client's JobNimbus CRM had accumulated 18 months of dirty data: duplicate records, stale pipeline stages, inconsistent tagging, and no automated follow-through. Sales reps were ignoring it entirely and reverting to ad-hoc tracking methods.",
     solution:
@@ -181,7 +181,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Reporting Dashboard",
-        body: "Built a dashboard showing pipeline volume by stage, conversion rates, average deal age, and rep activity — giving management weekly visibility without manual reporting.",
+        body: "Built a dashboard showing pipeline volume by stage, conversion rates, average deal age, and rep activity, giving management weekly visibility without manual reporting.",
       },
     ],
     tools: ["JobNimbus", "Google Sheets", "Zapier", "Google Data Studio"],
@@ -197,7 +197,7 @@ export const projects: Project[] = [
       { value: "40%", label: "Reduction in lead-to-close time" },
     ],
     lessons:
-      "CRM adoption is a people problem as much as a system problem. Rebuilding the data was important, but the biggest win was simplifying the pipeline stages so reps could use it without thinking — fewer stages, clearer criteria.",
+      "CRM adoption is a people problem as much as a system problem. Rebuilding the data was important, but the biggest win was simplifying the pipeline stages so reps could use it without thinking: fewer stages, clearer criteria.",
     dateCompleted: "2025-10",
     featuredOnHome: true,
     resumeVisible: true,
@@ -214,9 +214,9 @@ export const projects: Project[] = [
     shortSummary:
       "Connected fragmented Facebook Ads, CRM, and email marketing data into a single automated pipeline, cutting lead-to-close time by 40%.",
     problem:
-      "Lead data was siloed across Facebook Ads Manager, GoHighLevel CRM, and Flodesk. Marketing teams were manually exporting CSVs and copy-pasting data between platforms — a weekly process taking 4–6 hours and introducing frequent errors.",
+      "Lead data was siloed across Facebook Ads Manager, GoHighLevel CRM, and Flodesk. Marketing teams were manually exporting CSVs and copy-pasting data between platforms, a process taking 4-6 hours per week and introducing frequent errors.",
     solution:
-      "Built a Make.com integration architecture that connects all three platforms in real time. New Facebook leads auto-populate in GoHighLevel, trigger segmented email sequences in Flodesk, and sync campaign performance data back to a reporting sheet — zero manual data movement.",
+      "Built a Make.com integration architecture that connects all three platforms in real time. New Facebook leads auto-populate in GoHighLevel, trigger segmented email sequences in Flodesk, and sync campaign performance data back to a reporting sheet, with zero manual data movement.",
     process: [
       {
         heading: "Integration Mapping",
@@ -228,7 +228,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Audience Segmentation",
-        body: "Set up dynamic Flodesk segments based on lead source, campaign, and pipeline stage — enabling targeted follow-up sequences for different audience groups.",
+        body: "Set up dynamic Flodesk segments based on lead source, campaign, and pipeline stage, enabling targeted follow-up sequences for different audience groups.",
       },
       {
         heading: "QA & Monitoring",

@@ -1,4 +1,4 @@
-# Omer El Awad — Portfolio
+# Omer El Awad Portfolio
 
 Professional portfolio website for **Omer El Awad**, Operations & Automation Specialist.
 
@@ -67,7 +67,7 @@ portfolio-app/
 3. Fill in all fields, then paste the object into the `projects` array
 4. Set `featuredOnHome: true` to show it on the homepage
 5. Set `resumeVisible: true` to show it on the resume page
-6. Save — the site updates automatically everywhere
+6. Save. The site updates automatically everywhere
 
 **Key fields:**
 
@@ -113,7 +113,7 @@ All changes are reflected immediately on both the `/resume` page and the downloa
    - Enable **Background graphics** if you want the color accents
 4. Click Save
 
-The page uses CSS `@media print` styles that hide navigation, sidebars, and UI chrome — only the resume content is printed.
+The page uses CSS `@media print` styles that hide navigation, sidebars, and UI chrome. Only the resume content is printed.
 
 ---
 
@@ -145,7 +145,7 @@ Open [`data/experience.ts`](data/experience.ts) and add a new object to the `exp
 
 1. Push the repository to GitHub
 2. Import the repo at [vercel.com/new](https://vercel.com/new)
-3. Vercel auto-detects Next.js — no configuration needed
+3. Vercel auto-detects Next.js, no configuration needed
 4. Set root directory to `portfolio-app` if needed
 
 The site is fully static-export compatible and builds with zero environment variables required.

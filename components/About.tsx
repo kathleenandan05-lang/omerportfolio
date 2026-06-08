@@ -48,7 +48,7 @@ export default function About() {
 
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                I&apos;m an Industrial Engineer who spent years on the ground in logistics and manufacturing —
+                I&apos;m an Industrial Engineer who spent years on the ground in logistics and manufacturing,
                 running port operations, leading warehouse teams, and making supply chains work through
                 process discipline and data.
               </p>

@@ -51,7 +51,7 @@ export const coreSkills: CoreSkill[] = [
   {
     title: "Automation & Workflows",
     description:
-      "End-to-end automation with Zapier, Make.com, and Google Apps Script — connecting tools and eliminating manual steps.",
+      "End-to-end automation with Zapier, Make.com, and Google Apps Script, connecting tools and eliminating manual steps.",
     icon: "⚡",
   },
   {
@@ -75,7 +75,7 @@ export const coreSkills: CoreSkill[] = [
   {
     title: "Systems Integration",
     description:
-      "Connecting fragmented tools and platforms so data flows automatically — no manual exports, no CSV gymnastics.",
+      "Connecting fragmented tools and platforms so data flows automatically, with no manual exports or CSV gymnastics.",
     icon: "🔗",
   },
 ];

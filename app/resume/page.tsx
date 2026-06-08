@@ -6,7 +6,7 @@ import { profile } from "@/data/profile";
 import ResumeActions from "./ResumeActions";
 
 export const metadata: Metadata = {
-  title: `Resume — ${profile.name}`,
+  title: `Resume | ${profile.name}`,
   description: `Professional resume for ${profile.name}, ${profile.title}.`,
 };
 

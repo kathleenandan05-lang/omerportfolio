@@ -123,7 +123,7 @@ export default function ResumeView() {
               <ul className="mt-1.5 space-y-0.5">
                 {p.metrics.map((m) => (
                   <li key={m.label} className="text-xs text-slate-600">
-                    <span className="font-semibold text-slate-800">{m.value}</span> — {m.label}
+                    <span className="font-semibold text-slate-800">{m.value}</span>: {m.label}
                   </li>
                 ))}
               </ul>

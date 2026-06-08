@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FeaturedProjects from "@/components/FeaturedProjects";
 
 export const metadata: Metadata = {
-  title: "Projects & Case Studies — Omer El Awad",
+  title: "Projects & Case Studies | Omer El Awad",
   description:
     "A complete collection of automation, CRM, SOP, and operations projects built for real clients.",
 };
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
             </p>
           </div>
         </div>
-        {/* Reuse the FeaturedProjects component — it shows all by default */}
+        {/* Reuse the FeaturedProjects component - shows all by default */}
         <FeaturedProjects />
       </main>
       <Footer />
