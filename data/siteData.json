@@ -1,0 +1,23 @@
+{
+  "resume": {
+    "name": "Omer El-Awad",
+    "title": "Full Stack Developer",
+    "summary": "Experienced developer with a passion for building scalable web applications. LinkedIn: https://www.linkedin.com/in/omer-el-awad-ba2286129/",
+    "experience": [
+      {
+        "company": "Example Company",
+        "role": "Software Engineer",
+        "start": "2022",
+        "end": "Present",
+        "details": "Developed full-stack features using modern JavaScript frameworks."
+      }
+    ]
+  },
+  "portfolio": [
+    {
+      "title": "Sample Project",
+      "description": "A description of a sample project that demonstrates skills.",
+      "link": "#"
+    }
+  ]
+}
