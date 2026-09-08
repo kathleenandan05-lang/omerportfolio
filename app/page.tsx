@@ -4,6 +4,7 @@ import ValueProposition from "@/components/ValueProposition";
 import Results from "@/components/Results";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Services from "@/components/Services";
+import Skills from "@/components/Skills";
 import Tools from "@/components/Tools";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import About from "@/components/About";
@@ -20,6 +21,7 @@ export default function Home() {
         <Results />
         <FeaturedProjects />
         <Services />
+        <Skills />
         <Tools />
         <ExperienceTimeline />
         <About />

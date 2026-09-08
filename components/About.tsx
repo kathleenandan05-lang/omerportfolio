@@ -8,12 +8,12 @@ const highlights = [
   {
     icon: "🎓",
     label: "Lean Six Sigma Green Belt",
-    sub: "Industrial Engineering background",
+    sub: "Process discipline applied to every workflow",
   },
   {
-    icon: "🌐",
-    label: "6+ Years in Operations",
-    sub: "Logistics leadership to digital systems",
+    icon: "🏢",
+    label: "97-Person Teams Standardized",
+    sub: "SOPs and KPI systems built and adopted at enterprise scale",
   },
   {
     icon: "📍",
@@ -23,7 +23,7 @@ const highlights = [
   {
     icon: "✅",
     label: "ISO 9001:2015 Certified Auditor",
-    sub: "BRC, Halal & HACCP experience",
+    sub: "Detail-oriented quality and documentation mindset",
   },
 ];
 
@@ -41,36 +41,47 @@ export default function About() {
           >
             <SectionHeader
               eyebrow="About"
-              title="Engineered for operations. Built for automation."
+              title="Operations-trained. Systems-minded. Built to make your business run smoother."
               align="left"
               className="mb-6"
             />
 
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                I&apos;m an Industrial Engineer who spent years on the ground in logistics and manufacturing,
-                running port operations, leading warehouse teams, and making supply chains work through
-                process discipline and data.
+                I&apos;m an Operations & Automation Specialist with a background in industrial engineering
+                and 6+ years split between operations leadership and remote executive support. That
+                combination gives me something most assistants don&apos;t have: a systematic,
+                process-driven approach to every inbox, pipeline, and workflow I touch.
               </p>
               <p>
-                Over time, I transitioned into digital systems because I saw how much operational
-                complexity modern tools could eliminate. Today, I combine that hands-on operations
-                experience with automation platforms, CRM systems, and AI tools to help businesses
-                build infrastructure that scales.
+                I&apos;ve led SOP rollouts and KPI reporting for a 97-person operations team, and I&apos;ve
+                built the CRM pipelines, Zapier and Make.com automations, and AI-assisted workflows that
+                keep remote teams and coaching businesses running without the manual busywork. Whichever
+                side of the business I&apos;m supporting, the goal is the same: fewer dropped balls, clearer
+                visibility, and systems that don&apos;t depend on anyone remembering to do them by hand.
               </p>
               <p>
-                What I care about is the same whether I&apos;m writing an SOP or building a Zapier workflow:
-                making things work reliably, making information visible, and making it possible for your
-                team to focus on work that matters.
+                What I care about is being reliably useful: showing up prepared, following through on
+                deadlines, keeping communication clear, and making sure your operations never have to wait
+                on me.
               </p>
             </div>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href={`mailto:${profile.email}`}
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-0.5 text-sm"
               >
                 Get in Touch
+              </a>
+              <a
+                href="/resume"
+                className="inline-flex items-center gap-2 text-sm font-medium border border-slate-200 text-slate-700 px-6 py-3 rounded-xl hover:border-blue-300 hover:text-blue-600 transition-colors"
+              >
+                Download Resume
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
               </a>
               {profile.linkedin && (
                 <a

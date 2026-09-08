@@ -3,7 +3,7 @@
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import { experience } from "@/data/experience";
-import { toolCategories } from "@/data/skills";
+import { skillCategories } from "@/data/skills";
 import { results } from "@/data/results";
 import { formatDate } from "@/lib/utils";
 
@@ -55,15 +55,15 @@ export default function ResumeView() {
       {/* Skills & Tools */}
       <section className="mb-8">
         <h2 className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-3">
-          Skills & Tools
+          Core Skills
         </h2>
         <div className="space-y-2">
-          {toolCategories.map((cat) => (
+          {skillCategories.map((cat) => (
             <div key={cat.name} className="flex gap-3 text-sm">
               <span className="font-semibold text-slate-700 min-w-[140px] flex-shrink-0">
                 {cat.name}:
               </span>
-              <span className="text-slate-600">{cat.tools.join(", ")}</span>
+              <span className="text-slate-600">{cat.skills.join(", ")}</span>
             </div>
           ))}
         </div>

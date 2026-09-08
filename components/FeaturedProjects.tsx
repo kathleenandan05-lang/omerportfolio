@@ -40,8 +40,8 @@ export default function FeaturedProjects() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Portfolio"
-          title="Projects & Case Studies"
-          subtitle="Real work. Real results. Each project is a system built to solve a specific operations or automation problem."
+          title="Work Highlights"
+          subtitle="Real results from past engagements — covering CRM management, marketing automation, operations documentation, and admin support."
         />
 
         {/* Category Filters */}

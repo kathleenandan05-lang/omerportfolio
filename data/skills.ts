@@ -2,80 +2,69 @@
 // SKILLS & TOOLS DATA
 //
 // HOW TO UPDATE:
-// - Add tools to the relevant category in `toolCategories`
-// - Add or edit core skill cards in `coreSkills`
-// - The resume and tools section update automatically
+// - `skillCategories` powers the homepage Skills section and the
+//   Skills & Tools block on the resume page — these are capability
+//   groups, mirrored from the resume's Core Skills section.
+// - `toolCategories` powers the homepage Tools section — these are
+//   the actual product/platform names, grouped by use case.
 // ============================================================
+
+export interface SkillCategory {
+  name: string;
+  skills: string[];
+}
 
 export interface ToolCategory {
   name: string;
   tools: string[];
 }
 
-export interface CoreSkill {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-export const toolCategories: ToolCategory[] = [
+export const skillCategories: SkillCategory[] = [
   {
     name: "Automation",
-    tools: ["Zapier", "Make.com", "Google Apps Script"],
+    skills: ["Zapier", "Make.com", "Google Apps Script", "AI-assisted workflows"],
   },
   {
     name: "CRM & Operations",
-    tools: ["GoHighLevel", "JobNimbus", "Airtable", "AppSheet"],
+    skills: ["GoHighLevel", "JobNimbus", "Airtable", "AppSheet"],
   },
   {
-    name: "Productivity & Docs",
-    tools: ["Google Workspace", "Notion", "Microsoft Office"],
+    name: "Reporting & Data",
+    skills: ["Google Sheets", "Excel", "KPI dashboards", "Data cleanup & reconciliation"],
   },
   {
-    name: "Email & Marketing",
-    tools: ["Flodesk", "Canva"],
+    name: "Documentation",
+    skills: ["SOPs", "Process maps", "Onboarding guides", "Workflow documentation"],
   },
   {
-    name: "AI & Analysis",
-    tools: ["Claude", "ChatGPT", "Google Sheets", "Excel"],
+    name: "Marketing Operations",
+    skills: ["Flodesk", "Canva", "Facebook Lead Ads", "Email workflows"],
+  },
+  {
+    name: "AI Tools",
+    skills: ["Claude", "ChatGPT", "Codex"],
   },
 ];
 
-export const coreSkills: CoreSkill[] = [
+export const toolCategories: ToolCategory[] = [
   {
-    title: "Operations Systems",
-    description:
-      "SOP creation, process standardization, bottleneck elimination, and KPI framework design for operations teams.",
-    icon: "⚙️",
+    name: "Automation & Workflows",
+    tools: ["Zapier", "Make.com", "Google Apps Script"],
   },
   {
-    title: "Automation & Workflows",
-    description:
-      "End-to-end automation with Zapier, Make.com, and Google Apps Script, connecting tools and eliminating manual steps.",
-    icon: "⚡",
+    name: "CRM & Business Systems",
+    tools: ["GoHighLevel", "JobNimbus", "Airtable", "AppSheet"],
   },
   {
-    title: "CRM Management",
-    description:
-      "CRM setup, data cleanup, pipeline configuration, and stage-based automation in GoHighLevel and JobNimbus.",
-    icon: "🔧",
+    name: "Reporting & Data",
+    tools: ["Google Sheets", "Microsoft Excel", "Google Data Studio"],
   },
   {
-    title: "Reporting & Dashboards",
-    description:
-      "KPI dashboards, performance reports, and data visualization using Google Sheets, Airtable, and connected BI tools.",
-    icon: "📊",
+    name: "Marketing & Content",
+    tools: ["Flodesk", "Canva", "Kajabi", "Facebook Lead Ads"],
   },
   {
-    title: "Process Documentation",
-    description:
-      "Writing clear, structured SOPs and work instructions that teams can follow without ambiguity.",
-    icon: "📋",
-  },
-  {
-    title: "Systems Integration",
-    description:
-      "Connecting fragmented tools and platforms so data flows automatically, with no manual exports or CSV gymnastics.",
-    icon: "🔗",
+    name: "AI & Productivity",
+    tools: ["Claude", "ChatGPT", "Codex", "Notion", "Google Workspace"],
   },
 ];

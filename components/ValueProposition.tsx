@@ -5,26 +5,26 @@ import SectionHeader from "./SectionHeader";
 
 const values = [
   {
-    icon: "⚙️",
-    title: "Operations Systems",
+    icon: "📋",
+    title: "Executive & Operations Support",
     description:
-      "SOPs, process documentation, bottleneck elimination, and KPI frameworks that give your team clarity and consistency at scale.",
+      "I manage task lists, track deadlines, coordinate meetings, and follow up across departments — the day-to-day execution that keeps your calendar and your business moving.",
     color: "bg-slate-50 border-slate-200",
     iconBg: "bg-slate-100",
   },
   {
     icon: "⚡",
-    title: "Automation & CRM Workflows",
+    title: "CRM & Automation",
     description:
-      "End-to-end workflows in Zapier, Make.com, and GoHighLevel that eliminate manual steps and keep your pipeline moving automatically.",
+      "I build and maintain the CRM pipelines and Zapier/Make.com workflows that turn manual busywork into systems that run themselves — from lead intake to reporting.",
     color: "bg-blue-50 border-blue-100",
     iconBg: "bg-blue-100",
   },
   {
-    icon: "📊",
-    title: "Dashboards & Process Visibility",
+    icon: "🧭",
+    title: "Process Improvement & Documentation",
     description:
-      "KPI dashboards and reporting systems so you always know what's happening in your operations, without chasing updates.",
+      "With a Lean Six Sigma background, I find the root cause, fix it, and write the SOPs that make the fix stick — whether that's a 5-person team or a 97-person operation.",
     color: "bg-indigo-50 border-indigo-100",
     iconBg: "bg-indigo-100",
   },
@@ -46,8 +46,8 @@ export default function ValueProposition() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="What I Do"
-          title="Turning operational chaos into clear, scalable systems"
-          subtitle="Whether you're drowning in manual processes or flying blind without visibility, I build the systems that fix it."
+          title="Executive support that keeps your business moving"
+          subtitle="Whether you need executive backup, CRM cleanup, or workflow automation — I handle the operations behind the scenes so you can focus on the business."
         />
 
         <motion.div

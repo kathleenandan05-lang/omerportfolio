@@ -5,16 +5,16 @@
 
 export const profile = {
   name: "Omer El Awad",
-  title: "Operations & Automation Specialist",
-  tagline: "I build the systems that make operations work.",
+  title: "Executive Assistant | Operations, CRM & Automation Specialist",
+  tagline: "Turning day-to-day chaos into systems that run themselves.",
   summary:
-    "Industrial Engineer with Lean Six Sigma Green Belt certification, specialized in operations automation, CRM systems, and process optimization. I help businesses eliminate manual work, build scalable workflows, and get full visibility into their pipelines, combining engineering rigor with modern automation tools.",
+    "I help executives and growing businesses run tighter operations — building the CRM pipelines, SOPs, and automations that turn manual busywork into systems that run on their own. 6+ years across operations leadership and remote executive support, with hands-on expertise in GoHighLevel, Zapier, Make.com, and AI-assisted workflows.",
   resumeSummary:
-    "Results-driven Operations & Automation Specialist with 6+ years of experience leading logistics operations and building digital systems. Proven track record of reducing manual effort, improving process visibility, and building scalable CRM and automation workflows for service businesses and marketing teams.",
-  location: "Kidapawan City, Philippines (Remote)",
+    "Operations & Automation Specialist with 6+ years of experience building SOPs, CRM pipelines, workflow automations, and KPI dashboards for service businesses, real estate teams, and operations teams. Skilled in GoHighLevel, Zapier, Make.com, JobNimbus, Google Sheets, Apps Script, and AI-assisted workflows. Known for reducing manual work, improving response times, and giving teams clear visibility into pipeline, reporting, and execution.",
+  location: "Kidapawan, Philippines (Remote)",
   availability: "Open to new projects",
   email: "omerazharielawad@gmail.com",
-  linkedin: "https://linkedin.com/in/omer-el-awad",
+  linkedin: "https://www.linkedin.com/in/omer-el-awad-ba2286129",
   education: {
     degree: "Bachelor of Science in Industrial Engineering",
     school: "University of Southern Mindanao",
@@ -24,6 +24,5 @@ export const profile = {
     "Lean Six Sigma Green Belt",
     "ISO 9001:2015 Internal Auditor",
     "BRC Global Standard Auditor",
-    "HACCP & Halal Compliance Audit Experience",
   ],
 };

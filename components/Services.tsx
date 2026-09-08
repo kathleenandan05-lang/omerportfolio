@@ -7,45 +7,45 @@ import { profile } from "@/data/profile";
 const services = [
   {
     icon: "📋",
-    title: "Process Documentation & SOPs",
+    title: "Executive & Administrative Support",
     description:
-      "Clear, structured SOPs and work instructions that your team can follow without ambiguity. I document, format, and organize processes so nothing lives only in someone's head.",
-    deliverables: ["SOP documents", "Process maps", "Onboarding guides", "Work instructions"],
-  },
-  {
-    icon: "🔧",
-    title: "CRM Setup & Cleanup",
-    description:
-      "Whether you're starting fresh or inheriting a mess, I configure, clean, and automate your CRM so your pipeline is accurate and your team actually uses it.",
-    deliverables: ["Pipeline design", "Data cleanup", "Stage automation", "Reporting dashboards"],
-  },
-  {
-    icon: "⚡",
-    title: "Automation Workflows",
-    description:
-      "End-to-end automation with Zapier and Make.com, connecting your tools, eliminating manual handoffs, and making sure nothing falls through the cracks.",
-    deliverables: ["Multi-step Zaps/Scenarios", "App integrations", "Error handling", "Documentation"],
-  },
-  {
-    icon: "📊",
-    title: "Dashboard & KPI Reporting",
-    description:
-      "Operational dashboards that surface the right metrics at the right time, so you can make decisions without digging through spreadsheets.",
-    deliverables: ["KPI frameworks", "Google Sheets dashboards", "Airtable views", "Automated reports"],
+      "Day-to-day executive backup — managing task lists, tracking deadlines, coordinating meetings, and following up across departments to keep projects on schedule.",
+    deliverables: ["Task & deadline tracking", "Meeting coordination", "Inbox & calendar support", "Cross-team follow-ups"],
   },
   {
     icon: "🗂️",
-    title: "Data Organization & Reconciliation",
+    title: "CRM & Database Management",
     description:
-      "Cleaning, structuring, and reconciling messy data across platforms so your records are accurate and your systems work from a clean foundation.",
-    deliverables: ["Deduplication", "Data normalization", "Cross-platform sync", "Audit logs"],
+      "Building and maintaining CRM pipelines in GoHighLevel, JobNimbus, and Airtable — keeping contact records, pipeline stages, and lead data clean and accurate.",
+    deliverables: ["CRM pipeline setup", "Contact database cleanup", "Lead tracking", "Data accuracy audits"],
   },
   {
-    icon: "⚙️",
-    title: "Admin & Operations Support",
+    icon: "⚡",
+    title: "Workflow & Process Automation",
     description:
-      "Ongoing operational support for businesses that need a reliable systems person without a full-time hire, covering process improvement to tool management.",
-    deliverables: ["Tool management", "Process improvement", "Workflow optimization", "Team coordination"],
+      "Designing Zapier and Make.com workflows and AI-assisted automations that eliminate manual data entry and keep leads, notifications, and reports moving without you.",
+    deliverables: ["Zapier & Make.com workflows", "Lead intake automation", "AI-assisted drafting", "Notification systems"],
+  },
+  {
+    icon: "🧭",
+    title: "SOP & Process Documentation",
+    description:
+      "Applying Lean Six Sigma and root cause analysis to document what's broken, fix it, and write the SOPs and process maps that make the fix repeatable.",
+    deliverables: ["SOP authoring", "Process mapping", "Root cause analysis", "Onboarding guides"],
+  },
+  {
+    icon: "📊",
+    title: "Reporting & KPI Dashboards",
+    description:
+      "Building dashboards and reporting systems that give management real-time visibility into pipeline activity, operational performance, and task completion.",
+    deliverables: ["KPI dashboard builds", "Pipeline reporting", "Data reconciliation", "Performance tracking"],
+  },
+  {
+    icon: "🎨",
+    title: "Marketing Operations Support",
+    description:
+      "Running the marketing-ops layer — AI-assisted newsletter production, Kajabi course and landing page builds, Canva template review, and multi-channel post scheduling.",
+    deliverables: ["Newsletter production", "Landing page builds", "Canva template review", "Multi-channel scheduling"],
   },
 ];
 
@@ -65,8 +65,8 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Services"
-          title="What I can help you with"
-          subtitle="Focused on the operational work that compounds: systems, automation, and visibility."
+          title="How I support your business"
+          subtitle="Reliable, detail-driven support across the executive, CRM, and automation work that keeps your business running smoothly."
         />
 
         <motion.div
@@ -109,7 +109,7 @@ export default function Services() {
           className="mt-14 text-center"
         >
           <p className="text-slate-600 mb-5">
-            Not sure which service fits? Let&apos;s figure it out together.
+            Not sure where to start? Let&apos;s figure out what your team needs most.
           </p>
           <a
             href={`mailto:${profile.email}`}

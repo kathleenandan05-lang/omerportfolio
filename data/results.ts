@@ -29,8 +29,8 @@ export const results: ResultMetric[] = [
   },
   {
     value: "92%",
-    label: "Newsletter Time Saved",
-    description: "Weekly production dropped from 6+ hours to under 30 minutes",
+    label: "Marketing Time Saved",
+    description: "Weekly newsletter production dropped from 6+ hours to under 30 minutes",
     icon: "✉️",
   },
   {
@@ -42,13 +42,13 @@ export const results: ResultMetric[] = [
   {
     value: "6+",
     label: "Years in Operations",
-    description: "From logistics leadership to digital systems and automation",
+    description: "From logistics leadership and team coordination to remote admin and VA support",
     icon: "🗓️",
   },
   {
-    value: "37",
-    label: "Team Members Led",
-    description: "Warehouse and port operations teams at enterprise scale",
+    value: "97",
+    label: "Team Members Standardized",
+    description: "SOPs and KPI systems built and adopted across a 97-person port operations team",
     icon: "👥",
   },
   {
@@ -59,8 +59,8 @@ export const results: ResultMetric[] = [
   },
   {
     value: "100%",
-    label: "Lead Response in 2 Min",
-    description: "Automated follow-up system with zero manual intervention",
+    label: "Lead Response Rate",
+    description: "Every incoming inquiry followed up within 2 minutes through automated workflows",
     icon: "⏱️",
   },
 ];

@@ -13,32 +13,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Omer El Awad | Operations & Automation Specialist",
+  title: "Omer El Awad | Executive Assistant, Operations & Automation Specialist",
   description:
-    "Industrial Engineer and Automation Specialist who builds CRM systems, Zapier/Make workflows, dashboards, and SOPs that help businesses eliminate manual work and scale operations.",
+    "Executive Assistant and Operations Specialist with 6+ years building SOPs, CRM pipelines, workflow automations, and KPI dashboards. Skilled in GoHighLevel, Zapier, Make.com, and AI-assisted workflows — helping businesses run leaner and scale smoother.",
   keywords: [
+    "Executive Assistant",
+    "Virtual Executive Assistant",
     "Operations Specialist",
-    "Automation",
-    "CRM",
-    "Zapier",
-    "Make",
+    "CRM Specialist",
     "GoHighLevel",
-    "SOP",
+    "Business Operations",
     "Process Improvement",
-    "Virtual Assistant",
+    "Workflow Automation",
+    "Project Coordination",
+    "SOP Development",
+    "KPI Dashboards",
+    "Lean Six Sigma",
+    "Remote Operations Support",
   ],
   authors: [{ name: "Omer El Awad" }],
   openGraph: {
-    title: "Omer El Awad | Operations & Automation Specialist",
+    title: "Omer El Awad | Executive Assistant, Operations & Automation Specialist",
     description:
-      "Building CRM systems, automation workflows, and operations infrastructure that eliminates manual work and scales businesses.",
+      "Executive Assistant and Operations Specialist building SOPs, CRM pipelines, workflow automations, and KPI dashboards for growing businesses — entirely remote.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Omer El Awad | Operations & Automation Specialist",
+    title: "Omer El Awad | Executive Assistant, Operations & Automation Specialist",
     description:
-      "Building CRM systems, automation workflows, and operations infrastructure that eliminates manual work and scales businesses.",
+      "Executive Assistant and Operations Specialist building SOPs, CRM pipelines, workflow automations, and KPI dashboards for growing businesses — entirely remote.",
   },
 };
 

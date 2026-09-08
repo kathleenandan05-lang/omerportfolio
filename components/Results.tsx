@@ -20,8 +20,8 @@ export default function Results() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Impact & Results"
-          title="Numbers that reflect what good operations look like"
-          subtitle="These aren't estimates. They're real outcomes from systems I've built, fixed, or optimized."
+          title="What good support actually looks like"
+          subtitle="These aren't estimates. They're real outcomes from engagements I've been part of."
         />
 
         <motion.div

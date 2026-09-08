@@ -19,9 +19,9 @@ export default function Tools() {
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
-          eyebrow="Tech Stack"
-          title="Tools I work with"
-          subtitle="The platforms and tools I use to build, automate, and optimize."
+          eyebrow="Tools"
+          title="Platforms I work with"
+          subtitle="The tools I use daily to keep operations organized, automated, and moving."
         />
 
         <div className="mt-16 space-y-10">

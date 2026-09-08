@@ -42,8 +42,8 @@ export default function Hero() {
             variants={itemVariants}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-800 leading-[1.05] tracking-tight"
           >
-            I build the systems that make{" "}
-            <span className="text-blue-600">operations work.</span>
+            I keep executives and growing businesses{" "}
+            <span className="text-blue-600">organized, automated, and moving forward.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -52,6 +52,14 @@ export default function Hero() {
             className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl"
           >
             {profile.summary}
+          </motion.p>
+
+          {/* Positioning line */}
+          <motion.p
+            variants={itemVariants}
+            className="mt-4 text-sm font-medium text-slate-400 tracking-wide"
+          >
+            Executive Assistant &nbsp;·&nbsp; Operations &amp; CRM Specialist &nbsp;·&nbsp; Process Improvement &amp; Automation
           </motion.p>
 
           {/* CTA Buttons */}
@@ -64,19 +72,23 @@ export default function Hero() {
               }}
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
             >
-              View My Projects
+              View My Work
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
             <a
-              href="/resume"
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-semibold px-7 py-3.5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
-              Download Resume
+              Contact Me
             </a>
           </motion.div>
 
@@ -87,8 +99,8 @@ export default function Hero() {
           >
             {[
               { value: "6+", label: "Years Experience" },
-              { value: "90%", label: "Delay Reduction" },
-              { value: "37", label: "Team Members Led" },
+              { value: "92%", label: "Marketing Time Saved" },
+              { value: "100%", label: "Lead Response Rate" },
             ].map((stat) => (
               <div key={stat.label} className="flex items-center gap-3">
                 <span className="text-2xl font-bold text-slate-800">{stat.value}</span>

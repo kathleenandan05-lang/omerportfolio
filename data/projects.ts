@@ -283,20 +283,20 @@ export const projects: Project[] = [
       },
       {
         heading: "Rollout & Training",
-        body: "Conducted 3 training sessions with a 37-person team, integrated SOPs into onboarding materials, and established a monthly KPI review cadence with management.",
+        body: "Conducted 3 training sessions with a 97-person team, integrated SOPs into onboarding materials, and established a monthly KPI review cadence with management.",
       },
     ],
     tools: ["Microsoft Excel", "Google Sheets", "Google Docs", "Canva"],
     results: [
       "10% reduction in cargo damage incidents within 6 months",
       "24 core operations procedures documented and standardized",
-      "37-person team trained and aligned on consistent procedures",
+      "97-person team trained and aligned on consistent procedures",
       "Monthly KPI reporting became a standard management tool",
     ],
     metrics: [
       { value: "10%", label: "Reduction in cargo damage incidents" },
       { value: "24", label: "SOPs created and deployed" },
-      { value: "37", label: "Team members trained" },
+      { value: "97", label: "Team members trained" },
     ],
     dateCompleted: "2024-01",
     featuredOnHome: false,

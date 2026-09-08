@@ -20,13 +20,14 @@ export default function Contact() {
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 leading-tight mb-6">
-            Let&apos;s build something{" "}
-            <span className="text-blue-600">that actually works.</span>
+            Let&apos;s keep your operations organized{" "}
+            <span className="text-blue-600">and your systems working for you.</span>
           </h2>
 
           <p className="text-lg text-slate-500 leading-relaxed mb-10 max-w-xl mx-auto">
-            If you&apos;re looking to clean up your operations, automate manual work, or get
-            visibility into your pipeline. I&apos;d love to hear about what you&apos;re working on.
+            Looking for someone who can keep operations organized while improving the systems
+            behind your business? Whether it&apos;s executive support, CRM management, or
+            workflow automation — let&apos;s talk about what your team needs.
           </p>
 
           {/* CTA Buttons */}
