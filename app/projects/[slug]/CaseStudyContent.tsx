@@ -23,17 +23,17 @@ export default function CaseStudyContent({ project }: Props) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-red-50 border border-red-100 rounded-2xl p-7"
+          className="bg-red-50 dark:bg-red-500/10 border border-red-100 dark:border-red-500/20 rounded-2xl p-7"
         >
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
-              <svg className="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <div className="w-8 h-8 bg-red-100 dark:bg-red-500/15 rounded-lg flex items-center justify-center">
+              <svg className="w-4 h-4 text-red-500 dark:text-red-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
               </svg>
             </div>
-            <h2 className="text-sm font-bold text-red-700 uppercase tracking-wide">The Problem</h2>
+            <h2 className="text-sm font-bold text-red-700 dark:text-red-400 uppercase tracking-wide">The Problem</h2>
           </div>
-          <p className="text-slate-700 leading-relaxed text-sm">{project.problem}</p>
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm">{project.problem}</p>
         </motion.div>
 
         <motion.div
@@ -42,17 +42,17 @@ export default function CaseStudyContent({ project }: Props) {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="bg-blue-50 border border-blue-100 rounded-2xl p-7"
+          className="bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 rounded-2xl p-7"
         >
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-              <svg className="w-4 h-4 text-blue-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <div className="w-8 h-8 bg-blue-100 dark:bg-blue-500/15 rounded-lg flex items-center justify-center">
+              <svg className="w-4 h-4 text-blue-500 dark:text-blue-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
               </svg>
             </div>
-            <h2 className="text-sm font-bold text-blue-700 uppercase tracking-wide">The Solution</h2>
+            <h2 className="text-sm font-bold text-blue-700 dark:text-blue-400 uppercase tracking-wide">The Solution</h2>
           </div>
-          <p className="text-slate-700 leading-relaxed text-sm">{project.solution}</p>
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm">{project.solution}</p>
         </motion.div>
       </div>
 
@@ -64,7 +64,7 @@ export default function CaseStudyContent({ project }: Props) {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-slate-800 mb-8">How I approached it</h2>
+          <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-8">How I approached it</h2>
           <div className="space-y-4">
             {project.process.map((step, i) => (
               <motion.div
@@ -73,14 +73,14 @@ export default function CaseStudyContent({ project }: Props) {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.4 }}
-                className="flex gap-5 bg-white border border-slate-100 rounded-xl p-6 shadow-sm"
+                className="flex gap-5 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-xl p-6 shadow-sm"
               >
-                <div className="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0">
+                <div className="w-8 h-8 bg-blue-600 dark:bg-blue-500 text-white rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-slate-800 mb-1.5">{step.heading}</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">{step.body}</p>
+                  <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100 mb-1.5">{step.heading}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{step.body}</p>
                 </div>
               </motion.div>
             ))}
@@ -96,12 +96,12 @@ export default function CaseStudyContent({ project }: Props) {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-slate-800 mb-5">Tools & Platforms</h2>
+          <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-5">Tools & Platforms</h2>
           <div className="flex flex-wrap gap-2.5">
             {project.tools.map((tool) => (
               <span
                 key={tool}
-                className="bg-slate-100 text-slate-700 text-sm font-medium px-4 py-2 rounded-xl border border-slate-200"
+                className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700"
               >
                 {tool}
               </span>
@@ -118,13 +118,13 @@ export default function CaseStudyContent({ project }: Props) {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-slate-800 mb-5">Results</h2>
-          <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-7">
+          <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-5">Results</h2>
+          <div className="bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-100 dark:border-emerald-500/20 rounded-2xl p-7">
             <ul className="space-y-3">
               {project.results.map((r) => (
-                <li key={r} className="flex items-start gap-3 text-sm text-slate-700">
+                <li key={r} className="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
                   <svg
-                    className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0"
+                    className="w-5 h-5 text-emerald-500 dark:text-emerald-400 mt-0.5 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2.5}
@@ -148,15 +148,15 @@ export default function CaseStudyContent({ project }: Props) {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-slate-800 mb-5">Key Metrics</h2>
+          <h2 className="text-xl font-bold text-slate-800 dark:text-slate-100 mb-5">Key Metrics</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {project.metrics.map((m) => (
               <div
                 key={m.label}
-                className="bg-white border border-slate-100 rounded-2xl p-6 text-center shadow-sm"
+                className="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl p-6 text-center shadow-sm"
               >
-                <div className="text-3xl font-bold text-blue-600 mb-1">{m.value}</div>
-                <div className="text-xs text-slate-500 leading-tight">{m.label}</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">{m.value}</div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 leading-tight">{m.label}</div>
               </div>
             ))}
           </div>
@@ -170,21 +170,21 @@ export default function CaseStudyContent({ project }: Props) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-slate-50 border border-slate-200 rounded-2xl p-7"
+          className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-7"
         >
           <div className="flex items-center gap-2 mb-4">
             <span className="text-xl">💡</span>
-            <h2 className="text-sm font-bold text-slate-700 uppercase tracking-wide">What I learned</h2>
+            <h2 className="text-sm font-bold text-slate-700 dark:text-slate-200 uppercase tracking-wide">What I learned</h2>
           </div>
-          <p className="text-slate-600 leading-relaxed text-sm">{project.lessons}</p>
+          <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">{project.lessons}</p>
         </motion.div>
       )}
 
       {/* Tags */}
       {project.tags.length > 0 && (
-        <div className="pt-4 border-t border-slate-100 flex flex-wrap gap-2">
+        <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <span key={tag} className="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+            <span key={tag} className="text-xs text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">
               #{tag}
             </span>
           ))}

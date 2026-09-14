@@ -16,7 +16,7 @@ const cardVariants: Variants = {
 
 export default function Results() {
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-slate-50 dark:bg-slate-950">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Impact & Results"
@@ -36,19 +36,19 @@ export default function Results() {
               key={item.label}
               variants={cardVariants}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm text-center"
+              className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm text-center"
             >
               {item.icon && (
                 <div className="text-2xl mb-3">{item.icon}</div>
               )}
-              <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1.5">
+              <div className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-1.5">
                 {item.value}
               </div>
-              <div className="text-sm font-semibold text-slate-700 mb-1">
+              <div className="text-sm font-semibold text-slate-700 dark:text-slate-200 mb-1">
                 {item.label}
               </div>
               {item.description && (
-                <p className="text-xs text-slate-500 leading-relaxed mt-1">
+                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mt-1">
                   {item.description}
                 </p>
               )}

@@ -31,15 +31,15 @@ export default function SectionHeader({
       )}
     >
       {eyebrow && (
-        <p className="text-sm font-semibold tracking-widest text-blue-600 uppercase mb-3">
+        <p className="text-sm font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-3">
           {eyebrow}
         </p>
       )}
-      <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 leading-tight">
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-slate-100 leading-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-lg text-slate-500 leading-relaxed">{subtitle}</p>
+        <p className="mt-4 text-lg text-slate-500 dark:text-slate-400 leading-relaxed">{subtitle}</p>
       )}
     </motion.div>
   );

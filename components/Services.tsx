@@ -61,7 +61,7 @@ const cardVariants: Variants = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-slate-50 scroll-mt-16">
+    <section id="services" className="py-24 bg-slate-50 dark:bg-slate-950 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Services"
@@ -81,16 +81,16 @@ export default function Services() {
               key={service.title}
               variants={cardVariants}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="bg-white rounded-2xl border border-slate-100 p-7 shadow-sm hover:shadow-md hover:border-slate-200 transition-all duration-300"
+              className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-7 shadow-sm hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300"
             >
               <div className="text-3xl mb-4">{service.icon}</div>
-              <h3 className="text-base font-bold text-slate-800 mb-2">{service.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed mb-5">{service.description}</p>
+              <h3 className="text-base font-bold text-slate-800 dark:text-slate-100 mb-2">{service.title}</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-5">{service.description}</p>
               <ul className="flex flex-wrap gap-2">
                 {service.deliverables.map((d) => (
                   <li
                     key={d}
-                    className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md font-medium"
+                    className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 px-2.5 py-1 rounded-md font-medium"
                   >
                     {d}
                   </li>
@@ -108,12 +108,12 @@ export default function Services() {
           transition={{ delay: 0.3 }}
           className="mt-14 text-center"
         >
-          <p className="text-slate-600 mb-5">
+          <p className="text-slate-600 dark:text-slate-300 mb-5">
             Not sure where to start? Let&apos;s figure out what your team needs most.
           </p>
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
           >
             Start a Conversation
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

@@ -16,7 +16,7 @@ const badgeVariants: Variants = {
 
 export default function Tools() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Tools"
@@ -32,7 +32,7 @@ export default function Tools() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="text-xs font-semibold tracking-widest text-slate-400 uppercase mb-4"
+                className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-4"
               >
                 {category.name}
               </motion.h3>
@@ -48,7 +48,7 @@ export default function Tools() {
                     key={tool}
                     variants={badgeVariants}
                     whileHover={{ scale: 1.05, transition: { duration: 0.15 } }}
-                    className="inline-flex items-center bg-slate-50 border border-slate-200 text-slate-700 text-sm font-medium px-4 py-2 rounded-xl hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 cursor-default"
+                    className="inline-flex items-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium px-4 py-2 rounded-xl hover:border-blue-300 dark:hover:border-blue-500/40 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-500/10 transition-colors duration-200 cursor-default"
                   >
                     {tool}
                   </motion.span>

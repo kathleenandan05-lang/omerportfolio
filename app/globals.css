@@ -1,8 +1,14 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #F8FAFC;
   --foreground: #1E293B;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #F1F5F9;
 }
 
 @theme inline {
@@ -28,6 +34,10 @@ body {
   background-color: #DBEAFE;
   color: #1E40AF;
 }
+.dark ::selection {
+  background-color: #1E3A8A;
+  color: #DBEAFE;
+}
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
@@ -42,6 +52,15 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
 
 /* ─── PRINT STYLES (for resume export) ─────────────────── */

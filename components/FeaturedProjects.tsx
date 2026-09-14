@@ -36,7 +36,7 @@ export default function FeaturedProjects() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-24 bg-white scroll-mt-16">
+    <section id="projects" className="py-24 bg-white dark:bg-slate-900 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Portfolio"
@@ -58,8 +58,8 @@ export default function FeaturedProjects() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeCategory === cat
-                  ? "bg-blue-600 text-white shadow-sm"
-                  : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                  ? "bg-blue-600 dark:bg-blue-500 text-white shadow-sm"
+                  : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
               }`}
             >
               {cat}
@@ -85,7 +85,7 @@ export default function FeaturedProjects() {
         </AnimatePresence>
 
         {filtered.length === 0 && (
-          <div className="mt-16 text-center text-slate-500">
+          <div className="mt-16 text-center text-slate-500 dark:text-slate-400">
             No projects in this category yet.
           </div>
         )}
@@ -100,7 +100,7 @@ export default function FeaturedProjects() {
         >
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors border border-slate-200 hover:border-blue-300 px-6 py-3 rounded-xl"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500/40 px-6 py-3 rounded-xl"
           >
             View All Projects
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">

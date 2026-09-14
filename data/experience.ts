@@ -71,6 +71,7 @@ export const experience: ExperienceEntry[] = [
       "Conducted online research for vendors, tools, and partnership opportunities, compiling findings into clear, actionable summaries for client review",
       "Drafted and bulk-scheduled marketing posts for Facebook, Pinterest, Instagram, and TikTok through GoHighLevel",
       "Built and managed CRM pipelines in GoHighLevel and Airtable, maintaining accurate contact records and pipeline data",
+      "Built an intake-to-invoice workflow: Typeform intake logged to Airtable, with checkbox-triggered Zoho invoice generation and Outlook appointment scheduling",
       "Documented all systems, workflows, and processes for client handoffs and ongoing team reference",
     ],
     achievements: [
@@ -78,8 +79,8 @@ export const experience: ExperienceEntry[] = [
       "Delivered a 40% reduction in lead-to-close time through marketing stack integration",
       "Delivered multi-client engagements simultaneously with consistent quality",
     ],
-    tools: ["GoHighLevel", "Zapier", "Make.com", "Airtable", "Notion", "Google Workspace", "Canva"],
-    relatedProjects: ["automated-lead-capture-roofing", "marketing-stack-integration"],
+    tools: ["GoHighLevel", "Zapier", "Make.com", "Airtable", "Typeform", "Zoho", "Outlook", "Notion", "Google Workspace", "Canva"],
+    relatedProjects: ["automated-lead-capture-roofing", "marketing-stack-integration", "intake-to-invoice-automation"],
   },
   {
     id: "smilsi-port-ops",

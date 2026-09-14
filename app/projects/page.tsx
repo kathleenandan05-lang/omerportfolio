@@ -14,15 +14,15 @@ export default function ProjectsPage() {
     <>
       <Navbar />
       <main className="pt-16">
-        <div className="bg-white border-b border-slate-100 py-16">
+        <div className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 py-16">
           <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-            <p className="text-sm font-semibold tracking-widest text-blue-600 uppercase mb-4">
+            <p className="text-sm font-semibold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-4">
               Portfolio
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-800 dark:text-slate-100 leading-tight">
               All Projects & Case Studies
             </h1>
-            <p className="mt-4 text-lg text-slate-500 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
               Real work, real results. Each project is a system built to solve a specific
               operations or automation challenge.
             </p>

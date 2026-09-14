@@ -9,24 +9,24 @@ const values = [
     title: "Executive & Operations Support",
     description:
       "I manage task lists, track deadlines, coordinate meetings, and follow up across departments — the day-to-day execution that keeps your calendar and your business moving.",
-    color: "bg-slate-50 border-slate-200",
-    iconBg: "bg-slate-100",
+    color: "bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-700",
+    iconBg: "bg-slate-100 dark:bg-slate-700",
   },
   {
     icon: "⚡",
     title: "CRM & Automation",
     description:
       "I build and maintain the CRM pipelines and Zapier/Make.com workflows that turn manual busywork into systems that run themselves — from lead intake to reporting.",
-    color: "bg-blue-50 border-blue-100",
-    iconBg: "bg-blue-100",
+    color: "bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20",
+    iconBg: "bg-blue-100 dark:bg-blue-500/15",
   },
   {
     icon: "🧭",
     title: "Process Improvement & Documentation",
     description:
       "With a Lean Six Sigma background, I find the root cause, fix it, and write the SOPs that make the fix stick — whether that's a 5-person team or a 97-person operation.",
-    color: "bg-indigo-50 border-indigo-100",
-    iconBg: "bg-indigo-100",
+    color: "bg-indigo-50 dark:bg-indigo-500/10 border-indigo-100 dark:border-indigo-500/20",
+    iconBg: "bg-indigo-100 dark:bg-indigo-500/15",
   },
 ];
 
@@ -42,7 +42,7 @@ const cardVariants: Variants = {
 
 export default function ValueProposition() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="What I Do"
@@ -67,8 +67,8 @@ export default function ValueProposition() {
               <div className={`w-12 h-12 ${item.iconBg} rounded-xl flex items-center justify-center text-2xl mb-5`}>
                 {item.icon}
               </div>
-              <h3 className="text-lg font-bold text-slate-800 mb-3">{item.title}</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">{item.description}</p>
+              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-3">{item.title}</h3>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>

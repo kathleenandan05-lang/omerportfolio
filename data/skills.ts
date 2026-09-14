@@ -22,7 +22,7 @@ export interface ToolCategory {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Automation",
-    skills: ["Zapier", "Make.com", "Google Apps Script", "AI-assisted workflows"],
+    skills: ["Zapier", "Make.com", "n8n", "Microsoft Power Automate", "Google Apps Script", "AI-assisted workflows"],
   },
   {
     name: "CRM & Operations",
@@ -42,14 +42,14 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "AI Tools",
-    skills: ["Claude", "ChatGPT", "Codex"],
+    skills: ["Claude", "ChatGPT", "Codex", "Gemini Enterprise"],
   },
 ];
 
 export const toolCategories: ToolCategory[] = [
   {
     name: "Automation & Workflows",
-    tools: ["Zapier", "Make.com", "Google Apps Script"],
+    tools: ["Zapier", "Make.com", "n8n", "Microsoft Power Automate", "Google Apps Script"],
   },
   {
     name: "CRM & Business Systems",
@@ -65,6 +65,6 @@ export const toolCategories: ToolCategory[] = [
   },
   {
     name: "AI & Productivity",
-    tools: ["Claude", "ChatGPT", "Codex", "Notion", "Google Workspace"],
+    tools: ["Claude", "ChatGPT", "Codex", "Gemini Enterprise", "Notion", "Google Workspace", "Slack", "VS Code"],
   },
 ];

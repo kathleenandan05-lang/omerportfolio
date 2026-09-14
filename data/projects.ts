@@ -352,6 +352,188 @@ export const projects: Project[] = [
     resumeVisible: true,
     icon: "🚢",
   },
+
+  // ─── PROJECT 7 ───────────────────────────────────────────
+  {
+    slug: "flodesk-status-sync-automation",
+    title: "Status-Driven CRM & Flodesk Sync Automation",
+    category: "Automation",
+    tags: ["Zapier", "Flodesk", "Google Sheets", "CRM Sync", "QA Automation", "Segmentation"],
+    client: "Custom Product Fulfillment Business",
+    shortSummary:
+      "Built a multi-path Zapier automation that keeps Flodesk audience segments in sync with a live production tracker and automatically alerts the internal team when items are ready for quality review.",
+    problem:
+      "The client tracked customization project status and service tier in a shared Google Sheet, but keeping the matching Flodesk email segments up to date required manually moving contacts between lists every time a project's status changed. Missed updates meant customers received the wrong lifecycle emails, and the team had no automatic signal when an item was actually ready for internal quality review.",
+    solution:
+      "Designed a single Zapier automation that triggers on any new or updated row in the Master Data sheet, branches into parallel paths by Status and Tier, and updates the matching Flodesk segment for each combination (e.g. \"Tier 1/2/3 – Awaiting Client Completion,\" \"Missing Items,\" \"Complete / Needs QA\"). When a row lands in a Complete/Needs QA path, a filtered branch also fires an internal email to the review team with the project and tier details, so nothing waits on someone noticing it in the sheet.",
+    process: [
+      {
+        heading: "Trigger & Path Mapping",
+        body: "Mapped every Status × Tier combination in the Master Data sheet to its own Zapier path, using nested Paths steps to branch first by status category and then by tier.",
+      },
+      {
+        heading: "Flodesk Segment Logic",
+        body: "Built Create/Update Subscriber and add-to-segment actions for each path, so a single row update moves a contact into the correct Flodesk segment without any manual list management.",
+      },
+      {
+        heading: "QA Alert Branch",
+        body: "Added a Filter by Zapier step on the Complete/Needs QA paths so only genuinely QA-ready rows continue, then triggered a Gmail notification to the internal review team with the project and tier included.",
+      },
+      {
+        heading: "Testing Across Paths",
+        body: "Tested each status/tier path combination individually to confirm rows routed to the correct Flodesk segment and that QA alerts fired only on the intended status.",
+      },
+    ],
+    tools: ["Zapier", "Google Sheets", "Flodesk", "Gmail"],
+    results: [
+      "Flodesk segments now stay in sync with the production tracker automatically, with zero manual list moves",
+      "Internal QA team is notified the moment an item is ready for review, instead of relying on someone checking the sheet",
+      "8+ status/tier combinations routed correctly through a single automation",
+      "Eliminated the risk of customers receiving outdated lifecycle emails due to stale segment membership",
+    ],
+    metrics: [
+      { value: "8+", label: "Status/tier paths automated in one Zap" },
+      { value: "3", label: "Platforms connected (Sheets, Flodesk, Gmail)" },
+    ],
+    lessons:
+      "The hardest part wasn't the automation logic, it was mapping every real-world status and tier combination up front so no edge case fell through to the wrong Flodesk segment.",
+    dateCompleted: "2025-12",
+    featuredOnHome: true,
+    resumeVisible: true,
+    icon: "🔄",
+  },
+
+  // ─── PROJECT 8 ───────────────────────────────────────────
+  {
+    slug: "intake-to-invoice-automation",
+    title: "Intake-to-Invoice Automation",
+    category: "Automation",
+    tags: ["Typeform", "Airtable", "Zoho", "Outlook", "Zapier", "Invoicing"],
+    client: "Freelance Service Business Client",
+    shortSummary:
+      "Built an automated intake-to-invoice pipeline that takes a client from form submission to a scheduled appointment with zero manual data entry.",
+    problem:
+      "New client intake, invoicing, and scheduling were handled as separate manual steps. A submitted form still required someone to log the details, generate an invoice, and manually book the appointment.",
+    solution:
+      "Connected a Typeform intake form to Airtable for structured record-keeping, added a checkbox-triggered automation that generates a Zoho invoice, and synced confirmed appointments directly to Outlook, turning a 3-step manual handoff into one continuous flow.",
+    process: [
+      {
+        heading: "Intake Capture",
+        body: "Routed Typeform submissions directly into Airtable, creating a structured record for every new inquiry.",
+      },
+      {
+        heading: "Checkbox-Triggered Invoicing",
+        body: "Built a checkbox field in Airtable that, when checked, triggers automatic Zoho invoice generation for that record.",
+      },
+      {
+        heading: "Appointment Scheduling",
+        body: "Connected confirmed records to Outlook so appointments are scheduled automatically without a separate booking step.",
+      },
+      {
+        heading: "Testing",
+        body: "Tested the full path from form submission through invoice generation and calendar sync to confirm each handoff fired correctly.",
+      },
+    ],
+    tools: ["Typeform", "Airtable", "Zoho", "Outlook", "Zapier"],
+    results: [
+      "Eliminated manual data entry between intake, invoicing, and scheduling",
+      "Turned a 3-step manual handoff into one continuous automated flow",
+      "Reduced the chance of dropped or delayed invoices after intake",
+    ],
+    metrics: [],
+    dateCompleted: "2025-06",
+    featuredOnHome: false,
+    resumeVisible: true,
+    icon: "🧾",
+  },
+
+  // ─── PROJECT 9 ───────────────────────────────────────────
+  {
+    slug: "ai-assisted-web-app-development",
+    title: "AI-Assisted Web & App Development",
+    category: "Automation",
+    tags: ["Claude", "ChatGPT", "Codex", "Web Development", "AI-Assisted Development"],
+    client: "Freelance Web & App Clients",
+    shortSummary:
+      "Designed and shipped client websites and applications using AI-assisted development workflows to speed up delivery.",
+    problem:
+      "Clients needed working websites and applications delivered quickly, without the multi-week timelines typical of a fully manual build.",
+    solution:
+      "Used AI-assisted coding tools (Claude, ChatGPT/Codex) throughout the development workflow, from scaffolding and component generation to debugging and refactoring, to design and ship client websites and applications faster than a fully manual build.",
+    process: [
+      {
+        heading: "Requirements & Scoping",
+        body: "Gathered client requirements and mapped out the site or app structure before writing any code.",
+      },
+      {
+        heading: "AI-Assisted Build",
+        body: "Used Claude and ChatGPT/Codex to scaffold components, generate boilerplate, and accelerate implementation across the stack.",
+      },
+      {
+        heading: "Review & Refinement",
+        body: "Reviewed and refined AI-generated code for correctness, performance, and maintainability before shipping.",
+      },
+      {
+        heading: "Delivery",
+        body: "Deployed finished sites and applications for client use.",
+      },
+    ],
+    tools: ["Claude", "ChatGPT", "Codex"],
+    results: [
+      "Delivered client websites and applications faster than a fully manual build",
+      "Used AI-assisted workflows across scaffolding, debugging, and refactoring",
+      "Maintained code quality through manual review of AI-generated output before shipping",
+    ],
+    metrics: [],
+    dateCompleted: "2025-05",
+    featuredOnHome: false,
+    resumeVisible: true,
+    icon: "💻",
+  },
+
+  // ─── PROJECT 10 ──────────────────────────────────────────
+  {
+    slug: "web-scraping-ai-agent",
+    title: "Web-Scraping AI Agent",
+    category: "Automation",
+    tags: ["Claude", "ChatGPT", "AI Agents", "Web Scraping", "Data Structuring"],
+    client: "Freelance Research & Operations Clients",
+    shortSummary:
+      "Built an AI agent that automates web data collection and structuring for client research and operations.",
+    problem:
+      "Clients needed structured data gathered from the web for research and operational decision-making, a task that was slow and repetitive to do by hand.",
+    solution:
+      "Built an AI agent that automates the collection and structuring of web data, turning an unstructured, manual research task into a repeatable pipeline.",
+    process: [
+      {
+        heading: "Target & Structure Definition",
+        body: "Defined the data sources and the structured output format the client needed for downstream use.",
+      },
+      {
+        heading: "Agent Build",
+        body: "Built an AI agent to navigate and extract the required data from target web sources.",
+      },
+      {
+        heading: "Data Structuring",
+        body: "Structured the scraped output into a clean, usable format for client research and operations.",
+      },
+      {
+        heading: "Validation",
+        body: "Spot-checked extracted data for accuracy before handoff.",
+      },
+    ],
+    tools: ["Claude", "ChatGPT", "AI Agents", "Web Scraping"],
+    results: [
+      "Automated collection and structuring of web data for client research and operations",
+      "Replaced manual data-gathering with a repeatable AI agent pipeline",
+      "Delivered structured, ready-to-use datasets instead of raw unstructured pages",
+    ],
+    metrics: [],
+    dateCompleted: "2025-07",
+    featuredOnHome: false,
+    resumeVisible: true,
+    icon: "🕸️",
+  },
 ];
 
 // ─── HOW TO ADD A NEW PROJECT ─────────────────────────────

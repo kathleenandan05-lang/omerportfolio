@@ -39,11 +39,11 @@ export default async function ProjectPage({ params }: Props) {
       <Navbar />
       <main className="pt-16">
         {/* Hero Banner */}
-        <div className="bg-white border-b border-slate-100">
+        <div className="bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
           <div className="max-w-4xl mx-auto px-6 lg:px-8 py-16">
             <Link
               href="/#projects"
-              className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-blue-600 transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors mb-8"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
@@ -55,16 +55,16 @@ export default async function ProjectPage({ params }: Props) {
               {project.icon && (
                 <span className="text-3xl">{project.icon}</span>
               )}
-              <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+              <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 px-3 py-1 rounded-full">
                 {project.category}
               </span>
-              <span className="text-sm text-slate-400">{project.dateCompleted.replace("-", " / ")}</span>
+              <span className="text-sm text-slate-400 dark:text-slate-500">{project.dateCompleted.replace("-", " / ")}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-800 dark:text-slate-100 leading-tight mb-4">
               {project.title}
             </h1>
-            <p className="text-xl text-slate-500 leading-relaxed max-w-2xl">
+            <p className="text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
               {project.shortSummary}
             </p>
 
@@ -73,8 +73,8 @@ export default async function ProjectPage({ params }: Props) {
               <div className="mt-8 flex flex-wrap gap-6">
                 {project.metrics.map((m) => (
                   <div key={m.label} className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">{m.value}</div>
-                    <div className="text-xs text-slate-500 mt-0.5">{m.label}</div>
+                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{m.value}</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{m.label}</div>
                   </div>
                 ))}
               </div>
@@ -87,26 +87,26 @@ export default async function ProjectPage({ params }: Props) {
 
         {/* Other Projects */}
         {otherProjects.length > 0 && (
-          <div className="bg-white border-t border-slate-100 py-16">
+          <div className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 py-16">
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
-              <h2 className="text-lg font-bold text-slate-800 mb-8">Other Case Studies</h2>
+              <h2 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-8">Other Case Studies</h2>
               <div className="grid sm:grid-cols-2 gap-5">
                 {otherProjects.map((p) => (
                   <Link
                     key={p.slug}
                     href={`/projects/${p.slug}`}
-                    className="group bg-slate-50 hover:bg-white border border-slate-100 hover:border-slate-200 rounded-2xl p-6 transition-all duration-200 hover:shadow-sm"
+                    className="group bg-slate-50 hover:bg-white dark:bg-slate-800/50 dark:hover:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-slate-200 dark:hover:border-slate-600 rounded-2xl p-6 transition-all duration-200 hover:shadow-sm"
                   >
                     <div className="flex items-center gap-2 mb-3">
                       {p.icon && <span className="text-xl">{p.icon}</span>}
-                      <span className="text-xs font-semibold text-blue-600 uppercase tracking-wide">
+                      <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
                         {p.category}
                       </span>
                     </div>
-                    <h3 className="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors mb-2 leading-tight">
+                    <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 leading-tight">
                       {p.title}
                     </h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">
+                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                       {p.shortSummary}
                     </p>
                   </Link>
@@ -117,17 +117,17 @@ export default async function ProjectPage({ params }: Props) {
         )}
 
         {/* CTA */}
-        <div className="bg-slate-50 py-16">
+        <div className="bg-slate-50 dark:bg-slate-950 py-16">
           <div className="max-w-2xl mx-auto px-6 text-center">
-            <h2 className="text-2xl font-bold text-slate-800 mb-3">
+            <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-3">
               Want a system like this for your business?
             </h2>
-            <p className="text-slate-500 mb-7">
+            <p className="text-slate-500 dark:text-slate-400 mb-7">
               Let&apos;s talk about what you&apos;re working on.
             </p>
             <a
               href={`mailto:${profile.email}`}
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-0.5"
             >
               Get in Touch
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

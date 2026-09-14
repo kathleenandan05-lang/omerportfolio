@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { profile } from "@/data/profile";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -24,10 +25,23 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
+    if (window.location.pathname !== "/") {
+      window.location.href = `/${href}`;
+      return;
+    }
     const el = document.querySelector(href);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (window.location.pathname !== "/") {
+      window.location.href = "/";
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -38,7 +52,7 @@ export default function Navbar() {
         transition={{ duration: 0.4, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm"
+            ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -46,12 +60,12 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-              className="font-bold text-lg text-slate-800 hover:text-blue-600 transition-colors"
+              href="/"
+              onClick={handleLogoClick}
+              className="font-bold text-lg text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               {profile.name.split(" ")[0]}
-              <span className="text-blue-600">.</span>
+              <span className="text-blue-600 dark:text-blue-400">.</span>
             </a>
 
             {/* Desktop Nav */}
@@ -60,7 +74,7 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors cursor-pointer"
+                  className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
                 >
                   {link.label}
                 </button>
@@ -71,17 +85,19 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-3">
               <a
                 href="/resume"
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 Download Resume
               </a>
               <a
                 href={`mailto:${profile.email}`}
-                className="text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+                className="text-sm font-medium bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 Get in Touch
               </a>
             </div>
+
+            <ThemeToggle className="ml-1" />
 
             {/* Mobile Menu Toggle */}
             <button
@@ -91,15 +107,15 @@ export default function Navbar() {
             >
               <motion.span
                 animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-                className="block w-5 h-0.5 bg-slate-700 origin-center transition-all"
+                className="block w-5 h-0.5 bg-slate-700 dark:bg-slate-200 origin-center transition-all"
               />
               <motion.span
                 animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="block w-5 h-0.5 bg-slate-700"
+                className="block w-5 h-0.5 bg-slate-700 dark:bg-slate-200"
               />
               <motion.span
                 animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-                className="block w-5 h-0.5 bg-slate-700 origin-center transition-all"
+                className="block w-5 h-0.5 bg-slate-700 dark:bg-slate-200 origin-center transition-all"
               />
             </button>
           </div>
@@ -114,14 +130,14 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 left-0 right-0 z-40 bg-white border-b border-slate-100 shadow-lg md:hidden"
+            className="fixed top-16 left-0 right-0 z-40 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 shadow-lg md:hidden"
           >
             <nav className="flex flex-col px-6 py-4 gap-1">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-left text-base font-medium text-slate-700 hover:text-blue-600 py-3 border-b border-slate-50 last:border-0 transition-colors cursor-pointer"
+                  className="text-left text-base font-medium text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 py-3 border-b border-slate-50 dark:border-slate-800 last:border-0 transition-colors cursor-pointer"
                 >
                   {link.label}
                 </button>
@@ -129,14 +145,14 @@ export default function Navbar() {
               <div className="flex gap-3 pt-3">
                 <a
                   href="/resume"
-                  className="flex-1 text-center text-sm font-medium border border-slate-200 text-slate-700 px-4 py-2.5 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors"
+                  className="flex-1 text-center text-sm font-medium border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2.5 rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   Resume
                 </a>
                 <a
                   href={`mailto:${profile.email}`}
-                  className="flex-1 text-center text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg transition-colors"
+                  className="flex-1 text-center text-sm font-medium bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-4 py-2.5 rounded-lg transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   Get in Touch

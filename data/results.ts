@@ -63,4 +63,10 @@ export const results: ResultMetric[] = [
     description: "Every incoming inquiry followed up within 2 minutes through automated workflows",
     icon: "⏱️",
   },
+  {
+    value: "8+",
+    label: "Concurrent Automations Maintained",
+    description: "Zapier and Make.com workflows running simultaneously across CRM, email, and reporting",
+    icon: "🔁",
+  },
 ];

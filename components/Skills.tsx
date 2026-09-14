@@ -16,7 +16,7 @@ const cardVariants: Variants = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-slate-50 scroll-mt-16">
+    <section id="skills" className="py-24 bg-slate-50 dark:bg-slate-950 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <SectionHeader
           eyebrow="Skills"
@@ -36,10 +36,10 @@ export default function Skills() {
               key={category.name}
               variants={cardVariants}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm"
+              className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm"
             >
-              <h3 className="text-sm font-bold text-blue-600 mb-3">{category.name}</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
+              <h3 className="text-sm font-bold text-blue-600 dark:text-blue-400 mb-3">{category.name}</h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {category.skills.join(" · ")}
               </p>
             </motion.div>
