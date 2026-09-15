@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { profile } from "@/data/profile";
 
 export default function ResumeActions() {
@@ -11,12 +12,12 @@ export default function ResumeActions() {
           <p className="text-xs text-slate-400 dark:text-slate-500">{profile.title}</p>
         </div>
         <div className="flex gap-3">
-          <a
+          <Link
             href="/#contact"
             className="text-sm font-medium border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 px-4 py-2 rounded-lg hover:border-blue-300 dark:hover:border-blue-500/40 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             Contact Me
-          </a>
+          </Link>
           <button
             onClick={() => window.print()}
             className="inline-flex items-center gap-2 text-sm font-semibold bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-5 py-2 rounded-lg shadow-sm transition-colors cursor-pointer"

@@ -42,7 +42,7 @@ export default function Hero() {
             className="mt-6 text-lg text-(--rp-slate) leading-relaxed max-w-xl"
           >
             I combine executive support, operations management, CRM implementation,
-            reporting, and workflow automation into one dependable system — so leads
+            reporting, and workflow automation into one dependable system, so leads
             get followed up, work gets documented, and nothing depends on anyone
             remembering to do it by hand.
           </motion.p>

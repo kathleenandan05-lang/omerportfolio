@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { profile } from "@/data/profile";
 import ThemeToggle from "./ThemeToggle";
 
@@ -16,6 +18,8 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -25,8 +29,8 @@ export default function Navbar() {
 
   const handleNavClick = (href: string) => {
     setMenuOpen(false);
-    if (window.location.pathname !== "/") {
-      window.location.href = `/${href}`;
+    if (pathname !== "/") {
+      router.push(`/${href}`);
       return;
     }
     const el = document.querySelector(href);
@@ -36,11 +40,8 @@ export default function Navbar() {
   };
 
   const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname !== "/") return;
     e.preventDefault();
-    if (window.location.pathname !== "/") {
-      window.location.href = "/";
-      return;
-    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -59,14 +60,14 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <a
+            <Link
               href="/"
               onClick={handleLogoClick}
               className="font-bold text-lg text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               {profile.name.split(" ")[0]}
               <span className="text-blue-600 dark:text-blue-400">.</span>
-            </a>
+            </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8">

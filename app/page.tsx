@@ -1,33 +1,45 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import ValueProposition from "@/components/ValueProposition";
-import Results from "@/components/Results";
-import FeaturedProjects from "@/components/FeaturedProjects";
-import Services from "@/components/Services";
-import Skills from "@/components/Skills";
-import Tools from "@/components/Tools";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { Manrope, Inter } from "next/font/google";
+import "./homepage.css";
+import RedesignNavbar from "@/components/redesign/RedesignNavbar";
+import Hero from "@/components/redesign/Hero";
+import CredibilityStrip from "@/components/redesign/CredibilityStrip";
+import ServicesEditorial from "@/components/redesign/ServicesEditorial";
+import FeaturedCaseStudies from "@/components/redesign/FeaturedCaseStudies";
+import ResultsComposition from "@/components/redesign/ResultsComposition";
+import ExperienceTimeline from "@/components/redesign/ExperienceTimeline";
+import SkillsMatrix from "@/components/redesign/SkillsMatrix";
+import About from "@/components/redesign/About";
+import ContactCTA from "@/components/redesign/ContactCTA";
+import RedesignFooter from "@/components/redesign/RedesignFooter";
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <div className={`${manrope.variable} ${inter.variable} rp-scope min-h-screen`}>
+      <RedesignNavbar />
       <main>
         <Hero />
-        <ValueProposition />
-        <Results />
-        <FeaturedProjects />
-        <Services />
-        <Skills />
-        <Tools />
+        <CredibilityStrip />
+        <ServicesEditorial />
+        <FeaturedCaseStudies />
+        <ResultsComposition />
         <ExperienceTimeline />
+        <SkillsMatrix />
         <About />
-        <Contact />
+        <ContactCTA />
       </main>
-      <Footer />
-    </>
+      <RedesignFooter />
+    </div>
   );
 }

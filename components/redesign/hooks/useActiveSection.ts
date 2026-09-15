@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 /**
  * Tracks which of the given section ids currently sits nearest the
  * vertical center of the viewport, for sticky-nav active-state
- * highlighting. Plain IntersectionObserver — no scroll listener.
+ * highlighting. Plain IntersectionObserver, no scroll listener.
  */
 export function useActiveSection(ids: string[]) {
   const [activeId, setActiveId] = useState(ids[0]);

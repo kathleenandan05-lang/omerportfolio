@@ -1,8 +1,8 @@
 /* ============================================================
-   Scoped design tokens for the /redesign-preview route only.
-   Everything here lives under .rp-scope — no :root or bare
-   element selectors — so it cannot leak into (or be affected
-   by) the rest of the site's theme or dark/light toggle.
+   Scoped design tokens for the homepage only. Everything here
+   lives under .rp-scope, no :root or bare element selectors, so
+   it cannot leak into (or be affected by) the site's other pages
+   or their dark/light toggle.
    ============================================================ */
 
 .rp-scope {
@@ -33,7 +33,7 @@
   color: var(--rp-soft-white);
 }
 
-/* ─── Dashboard mockup motion ─────────────────────────────── */
+/* Dashboard mockup motion */
 
 @keyframes rp-pulse {
   0%,

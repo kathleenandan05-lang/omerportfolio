@@ -1,7 +1,7 @@
 "use client";
 
 import { results } from "@/data/results";
-import { useCountUp } from "@/app/redesign-preview/hooks/useCountUp";
+import { useCountUp } from "@/components/redesign/hooks/useCountUp";
 
 function parseValue(raw: string): { num: number; prefix: string; suffix: string } {
   const match = raw.match(/^([^\d]*)(\d+(?:\.\d+)?)(.*)$/);
@@ -65,7 +65,7 @@ export default function ResultsComposition() {
           {/* Supporting metrics + explanation */}
           <div>
             <p className="text-(--rp-slate) leading-relaxed mb-8 max-w-lg">
-              These outcomes weren&apos;t one-off wins — they came from applying the same
+              These outcomes weren&apos;t one-off wins. They came from applying the same
               approach every time: map the process, find the bottleneck, automate or
               document the fix, then track whether it actually held.
             </p>

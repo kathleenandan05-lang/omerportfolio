@@ -51,14 +51,14 @@ export default function About() {
           <div className="space-y-4 text-(--rp-slate) leading-relaxed">
             <p>
               I started in industrial engineering, then spent years supervising port and
-              shipping operations — standardizing procedures, running root-cause analysis,
+              shipping operations, standardizing procedures, running root-cause analysis,
               and keeping large teams aligned on the same process. That background is why I
               approach remote executive and CRM work the same way: find the bottleneck,
               build the system, document it so it doesn&apos;t depend on me.
             </p>
             <p>
               Today that means CRM pipelines, Zapier and Make.com automations, and AI-assisted
-              workflows for remote teams and coaching businesses — the same standardization
+              workflows for remote teams and coaching businesses: the same standardization
               instinct, just applied to inboxes and pipelines instead of ports.
             </p>
             <p>

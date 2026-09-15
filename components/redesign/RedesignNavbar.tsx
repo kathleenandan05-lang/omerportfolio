@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/profile";
-import { useActiveSection } from "@/app/redesign-preview/hooks/useActiveSection";
+import { useActiveSection } from "@/components/redesign/hooks/useActiveSection";
 
 const navLinks = [
   { id: "about", label: "About" },

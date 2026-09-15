@@ -23,13 +23,13 @@ const services = [
     icon: Workflow,
     title: "CRM & Workflow Automation",
     problem:
-      "Leads sit in spreadsheets, CRMs go stale, and marketing tools don't talk to each other — so response times slip and deals get missed.",
+      "Leads sit in spreadsheets, CRMs go stale, and marketing tools don't talk to each other, so response times slip and deals get missed.",
     handles: [
       "CRM pipeline design and cleanup (GoHighLevel, JobNimbus, Airtable)",
       "Zapier/Make.com automations connecting lead sources, CRM, and email",
       "AI-assisted content and newsletter production pipelines",
     ],
-    outcome: "Every new lead gets a response in minutes, not hours — automatically.",
+    outcome: "Every new lead gets a response in minutes, not hours, automatically.",
     tools: ["GoHighLevel", "Zapier", "Make.com", "n8n"],
   },
   {
