@@ -1,0 +1,79 @@
+/* ============================================================
+   Scoped design tokens for the /redesign-preview route only.
+   Everything here lives under .rp-scope — no :root or bare
+   element selectors — so it cannot leak into (or be affected
+   by) the rest of the site's theme or dark/light toggle.
+   ============================================================ */
+
+.rp-scope {
+  --rp-navy: #071422;
+  --rp-midnight: #0d2035;
+  --rp-warm-white: #f7f6f2;
+  --rp-soft-white: #fcfcfa;
+  --rp-slate: #526173;
+  --rp-blue: #2563eb;
+  --rp-cyan: #38bdf8;
+  --rp-gold: #c8a45d;
+
+  background-color: var(--rp-warm-white);
+  color: var(--rp-slate);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.rp-scope h1,
+.rp-scope h2,
+.rp-scope h3,
+.rp-scope h4 {
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.rp-scope ::selection {
+  background-color: var(--rp-blue);
+  color: var(--rp-soft-white);
+}
+
+/* ─── Dashboard mockup motion ─────────────────────────────── */
+
+@keyframes rp-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes rp-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes rp-fill {
+  from {
+    width: 0%;
+  }
+}
+
+.rp-status-dot {
+  animation: rp-pulse 2.2s ease-in-out infinite;
+}
+
+.rp-connector-dash {
+  stroke-dasharray: 4 8;
+  animation: rp-dash 1.6s linear infinite;
+}
+
+.rp-progress-fill {
+  animation: rp-fill 1.2s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rp-status-dot,
+  .rp-connector-dash,
+  .rp-progress-fill {
+    animation: none !important;
+  }
+}
