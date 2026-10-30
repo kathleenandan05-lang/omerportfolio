@@ -19,7 +19,7 @@ export default function CaseStudyVisual(props: Props) {
     return (
       <div className="flex items-center gap-4 sm:gap-6">
         <div className="flex-1 rounded-xl border border-(--rp-slate)/20 bg-(--rp-warm-white) p-5 text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-(--rp-slate)/70 mb-2">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-(--rp-slate) mb-2">
             Before
           </p>
           <p className="text-2xl sm:text-3xl font-bold text-(--rp-slate)">{before.value}</p>

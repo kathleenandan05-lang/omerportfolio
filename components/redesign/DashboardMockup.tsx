@@ -106,7 +106,7 @@ export default function DashboardMockup() {
       <div className="grid grid-cols-2 divide-x divide-(--rp-slate)/12">
         {/* CRM pipeline */}
         <div className="p-5 border-b border-(--rp-slate)/12">
-          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate)/70 mb-3">
+          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate) mb-3">
             Pipeline
           </p>
           <div className="space-y-2">
@@ -127,7 +127,7 @@ export default function DashboardMockup() {
 
         {/* KPI chart */}
         <div className="p-5 border-b border-(--rp-slate)/12">
-          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate)/70 mb-3">
+          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate) mb-3">
             Response Time
           </p>
           <div className="flex items-end gap-1.5 h-16">
@@ -147,7 +147,7 @@ export default function DashboardMockup() {
 
         {/* SOP / task completion */}
         <div className="p-5">
-          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate)/70 mb-3">
+          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate) mb-3">
             SOP Rollout
           </p>
           <div className="space-y-2 mb-3">
@@ -159,7 +159,7 @@ export default function DashboardMockup() {
                   <Circle className="w-3.5 h-3.5 text-(--rp-slate)/40 flex-shrink-0" strokeWidth={2} />
                 )}
                 <span
-                  className={`text-xs ${task.done ? "text-(--rp-slate)/60 line-through" : "text-(--rp-navy) font-medium"}`}
+                  className={`text-xs ${task.done ? "text-(--rp-slate) line-through" : "text-(--rp-navy) font-medium"}`}
                 >
                   {task.label}
                 </span>
@@ -173,7 +173,7 @@ export default function DashboardMockup() {
 
         {/* Project status */}
         <div className="p-5">
-          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate)/70 mb-3">
+          <p className="text-[11px] font-semibold tracking-wide uppercase text-(--rp-slate) mb-3">
             System Status
           </p>
           <div className="space-y-2.5">

@@ -16,6 +16,12 @@ export default function Hero() {
     hidden: { opacity: 0, y: 18 },
     visible: { opacity: 1, y: 0, transition: { duration: shouldReduceMotion ? 0 : 0.55, ease: "easeOut" } },
   };
+  // Headline and intro stay fully opaque from the first paint so they count
+  // as the page's Largest Contentful Paint immediately; they only slide in.
+  const textItem: Variants = {
+    hidden: { y: shouldReduceMotion ? 0 : 12 },
+    visible: { y: 0, transition: { duration: shouldReduceMotion ? 0 : 0.55, ease: "easeOut" } },
+  };
 
   return (
     <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28">
@@ -31,14 +37,14 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1
-            variants={item}
+            variants={textItem}
             className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-(--rp-navy) leading-[1.08]"
           >
             I build the systems that keep growing businesses moving.
           </motion.h1>
 
           <motion.p
-            variants={item}
+            variants={textItem}
             className="mt-6 text-lg text-(--rp-slate) leading-relaxed max-w-xl"
           >
             I combine executive support, operations management, CRM implementation,
@@ -70,7 +76,7 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="mt-8 text-sm text-(--rp-slate)/80 border-t border-(--rp-slate)/15 pt-6"
+            className="mt-8 text-sm text-(--rp-slate) border-t border-(--rp-slate)/15 pt-6"
           >
             6+ years in operations &nbsp;·&nbsp; Lean Six Sigma Green Belt &nbsp;·&nbsp;{" "}
             {profile.location}

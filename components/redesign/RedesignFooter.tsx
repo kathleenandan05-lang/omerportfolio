@@ -31,7 +31,7 @@ export default function RedesignFooter() {
           </a>
         </div>
 
-        <p className="text-xs text-(--rp-soft-white)/40">© {year} {profile.name}</p>
+        <p className="text-xs text-(--rp-soft-white)/60">© {year} {profile.name}</p>
       </div>
     </footer>
   );

@@ -119,7 +119,7 @@ export default function ContactCTA() {
                   required
                   value={form.name}
                   onChange={handleChange("name")}
-                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/30 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan)"
+                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/50 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan)"
                   placeholder="Jane Doe"
                 />
               </div>
@@ -133,7 +133,7 @@ export default function ContactCTA() {
                   required
                   value={form.email}
                   onChange={handleChange("email")}
-                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/30 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan)"
+                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/50 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan)"
                   placeholder="jane@company.com"
                 />
               </div>
@@ -146,7 +146,7 @@ export default function ContactCTA() {
                   type="text"
                   value={form.company}
                   onChange={handleChange("company")}
-                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/30 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan)"
+                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/50 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan)"
                   placeholder="Company name"
                 />
               </div>
@@ -160,7 +160,7 @@ export default function ContactCTA() {
                   required
                   value={form.message}
                   onChange={handleChange("message")}
-                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/30 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan) resize-none"
+                  className="w-full bg-(--rp-navy) border border-(--rp-soft-white)/15 rounded-md px-3.5 py-2.5 text-sm text-(--rp-soft-white) placeholder:text-(--rp-soft-white)/50 focus:outline-2 focus:outline-offset-1 focus:outline-(--rp-cyan) resize-none"
                   placeholder="CRM cleanup, lead automation, executive support..."
                 />
               </div>
