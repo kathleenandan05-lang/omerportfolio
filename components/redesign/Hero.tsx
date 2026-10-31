@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { profile } from "@/data/profile";
 import DashboardMockup from "./DashboardMockup";
 
@@ -53,24 +53,29 @@ export default function Hero() {
             remembering to do it by hand.
           </motion.p>
 
+          {/* One primary action (contact) and one secondary (work). The résumé
+              lives in the navbar so it doesn't compete here. */}
           <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
+            <a
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="inline-flex items-center gap-2 bg-(--rp-blue) hover:bg-(--rp-navy) text-white font-bold px-7 py-3.5 rounded-md shadow-lg shadow-(--rp-blue)/25 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
+            >
+              Let&apos;s Work Together
+              <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+            </a>
             <a
               href="#case-studies"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="inline-flex items-center gap-2 bg-(--rp-navy) hover:bg-(--rp-midnight) text-(--rp-soft-white) font-semibold px-6 py-3.5 rounded-md transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
+              className="inline-flex items-center gap-2 border-2 border-(--rp-navy)/20 text-(--rp-navy) font-semibold px-6 py-3 rounded-md hover:border-(--rp-navy) hover:bg-(--rp-navy)/5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
             >
               Explore My Work
-              <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
-            </a>
-            <a
-              href="/resume"
-              className="inline-flex items-center gap-2 border border-(--rp-slate)/30 text-(--rp-navy) font-semibold px-6 py-3.5 rounded-md hover:border-(--rp-navy)/50 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
-            >
-              <Download className="w-4 h-4" strokeWidth={2} />
-              Download Résumé
             </a>
           </motion.div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -33,7 +33,12 @@ const filters: FilterBucket[] = [
   "Executive Support",
 ];
 
-export default function ProjectGrid() {
+interface Props {
+  /** Opens a case study in the modal instead of navigating; see FeaturedCaseStudies. */
+  onOpenCaseStudy?: (e: MouseEvent<HTMLAnchorElement>, slug: string) => void;
+}
+
+export default function ProjectGrid({ onOpenCaseStudy }: Props) {
   const [active, setActive] = useState<FilterBucket>("All");
   const shouldReduceMotion = useReducedMotion();
 
@@ -74,6 +79,7 @@ export default function ProjectGrid() {
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
+              onClick={(e) => onOpenCaseStudy?.(e, project.slug)}
               className="group rounded-xl border border-(--rp-slate)/15 bg-(--rp-soft-white) p-6 hover:border-(--rp-blue)/40 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
             >
               <span className="text-xs font-semibold uppercase tracking-wide text-(--rp-blue) bg-(--rp-blue)/10 px-2.5 py-1 rounded-full">

@@ -84,7 +84,11 @@ export default function RedesignNavbar() {
               Download Résumé
             </a>
             <a
-              href={`mailto:${profile.email}`}
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick("contact");
+              }}
               className="inline-flex items-center gap-1.5 text-sm font-semibold bg-(--rp-navy) hover:bg-(--rp-midnight) text-(--rp-soft-white) px-4 py-2.5 rounded-md transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
             >
               Let&apos;s Work Together
@@ -92,15 +96,23 @@ export default function RedesignNavbar() {
             </a>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            className="lg:hidden flex items-center justify-center w-11 h-11 -mr-2 text-(--rp-navy) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue) rounded-md cursor-pointer"
-            onClick={() => setMenuOpen((v) => !v)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile: résumé text link stays visible next to the menu toggle */}
+          <div className="lg:hidden flex items-center gap-2">
+            <a
+              href="/resume"
+              className="text-sm font-medium text-(--rp-slate) hover:text-(--rp-navy) transition-colors px-2 py-3 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue)"
+            >
+              Résumé
+            </a>
+            <button
+              className="flex items-center justify-center w-11 h-11 -mr-2 text-(--rp-navy) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue) rounded-md cursor-pointer"
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+            >
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 

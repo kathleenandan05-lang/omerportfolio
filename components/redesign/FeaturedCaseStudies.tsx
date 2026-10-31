@@ -1,11 +1,13 @@
 "use client";
 
+import { useState, type MouseEvent } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { projects } from "@/data/projects";
+import { projects, type Project } from "@/data/projects";
 import CaseStudyVisual from "./CaseStudyVisual";
 import ProjectGrid from "./ProjectGrid";
+import CaseStudyModal from "./CaseStudyModal";
 
 const featured = [
   {
@@ -41,6 +43,21 @@ const featured = [
 
 export default function FeaturedCaseStudies() {
   const shouldReduceMotion = useReducedMotion();
+  // activeProject outlives `open` so the modal keeps its content while animating out.
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [open, setOpen] = useState(false);
+
+  // A plain click opens the modal. Modifier or middle clicks fall through to
+  // the normal link so a case study can still open in a new tab, and the
+  // href keeps working for crawlers and visitors without JavaScript.
+  const openCaseStudy = (e: MouseEvent<HTMLAnchorElement>, slug: string) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const project = projects.find((p) => p.slug === slug);
+    if (!project) return;
+    e.preventDefault();
+    setActiveProject(project);
+    setOpen(true);
+  };
 
   return (
     <section id="case-studies" className="py-24 lg:py-32 bg-(--rp-soft-white) scroll-mt-20">
@@ -96,6 +113,7 @@ export default function FeaturedCaseStudies() {
 
                   <Link
                     href={`/projects/${project.slug}`}
+                    onClick={(e) => openCaseStudy(e, project.slug)}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-(--rp-navy) hover:text-(--rp-blue) transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--rp-blue) rounded-sm"
                   >
                     Read the full case study
@@ -111,8 +129,10 @@ export default function FeaturedCaseStudies() {
           })}
         </div>
 
-        <ProjectGrid />
+        <ProjectGrid onOpenCaseStudy={openCaseStudy} />
       </div>
+
+      <CaseStudyModal project={activeProject} open={open} onClose={() => setOpen(false)} />
     </section>
   );
 }
